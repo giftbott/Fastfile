@@ -2,8 +2,6 @@
 #update_fastlane
 #fastlane_version "2.38.0"
 
-REQUIRED_XCODE_VERSION = "8.3.2"
-
 default_platform :ios
 
 ### iOS Platform Setting ###
