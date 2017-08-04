@@ -60,7 +60,6 @@ platform :ios do
 
 
   def common_release_process(options, type="release")
-    ensure_xcode_version(version: REQUIRED_XCODE_VERSION)
     ensure_git_status_clean
     ensure_git_branch(
       branch: 'master'
