@@ -46,14 +46,14 @@ platform :ios do
       output_path: "fastlane/certificates",
     )
 
-    config = isRelease ? "Release" : "ad-hoc"
+    exportMethod = isRelease ? "app-store" : "ad-hoc"
     gym(
       scheme: ENV["SCHEME"],
-      configuration: config,
       clean: true,
       silent: true,
+      export_method: exportMethod,
       include_bitcode: false,
-      output_name: ENV["SCHEME"] + "_#{current_version_string}_#{config}.ipa",
+      output_name: ENV["SCHEME"] + "_#{current_version_string}_#{exportMethod}.ipa",
       output_directory: "fastlane/ipa",
     ) 
   end
